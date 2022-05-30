@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { DataContext } from "../store/GlobalState";
-import { DeleteItem } from "../store/action";
+import { DeleteItem } from "../store/Action";
 import { DeleteData } from "../utils/fetchData";
 import { useRouter } from "next/router";
 const Modal = () => {

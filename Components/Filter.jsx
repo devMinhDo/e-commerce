@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import FilterSearch from "../utils/filterSearch";
 import { getData } from "../utils/fetchData";
 import { useRouter } from "next/router";
 import filterSearch from "../utils/filterSearch";

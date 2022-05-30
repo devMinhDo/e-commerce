@@ -2,7 +2,7 @@
 import React, { useContext, useState, useRef, useEffect } from 'react'
 import { DataContext } from '../store/GlobalState';
 import { postData, putData } from '../utils/fetchData'
-import { updateItem } from '../store/action';
+import { updateItem } from '../store/Action';
 
 
 const categorys = () => {

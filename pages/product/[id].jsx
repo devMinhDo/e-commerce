@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { getData } from '../../utils/fetchData'
 import { useContext } from 'react';
 import { DataContext } from '../../store/GlobalState';
-import { addToCart } from '../../store/action';
+import { addToCart } from '../../store/Action';
 
 const DetailProduct = ({ product }) => {
     const [DetailProduct] = useState(product);

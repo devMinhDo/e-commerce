@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import { useContext } from 'react';
 import { DataContext } from '../../store/GlobalState';
-import { addToCart } from '../../store/action';
+import { addToCart } from '../../store/Action';
 const ProductItem = ({ key, product, handleCheck }) => {
     const { state, dispatch } = useContext(DataContext)
     const { cart, auth } = state;

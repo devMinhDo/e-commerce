@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { decrease, increase } from '../store/action'
+import { decrease, increase } from '../store/Action'
 const CartItem = ({ item, dispatch, cart }) => {
     return (
         <tr>
