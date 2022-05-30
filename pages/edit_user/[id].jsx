@@ -3,7 +3,7 @@ import { useContext, useState, useEffect } from 'react';
 import { DataContext } from '../../store/GlobalState';
 import { useRouter } from 'next/router'
 import { patchData } from '../../utils/fetchData';
-import { updateItem } from '../../store/action';
+import { updateItem } from '../../store/Action';
 const EditUser = () => {
     const { state, dispatch } = useContext(DataContext);
     const { auth, users } = state;
