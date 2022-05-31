@@ -1,5 +1,4 @@
-import React from 'react'
-import { useContext, useEffect, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { DataContext } from '../store/GlobalState';
 import CartItem from '../Components/CartItem';
 import Link from 'next/link'
@@ -7,14 +6,14 @@ import { getData } from '../utils/fetchData';
 import { postData } from '../utils/fetchData';
 import { useRouter } from 'next/router';
 
-const cart = () => {
+
+const Cart = () => {
   const { state, dispatch } = useContext(DataContext)
   const { cart, auth, orders } = state
-  if (cart.length === 0) return <h2>Giỏ hàng chưa có sản phẩm nào</h2>
   const [total, setTotal] = useState(0);
   const [address, setAddress] = useState('');
   const [phone, setPhone] = useState('');
-  const [callback, setCallback] = useState(false);
+  const [callback, setCallback] = useState(false)
   const router = useRouter()
   useEffect(() => {
     const getTotal = cart.reduce((prev, item) => {
@@ -78,6 +77,8 @@ const cart = () => {
     dispatch({ type: 'NOTIFY', payload: { success: res.msg } })
     return router.push(`/order/${newOrder._id}`)
   }
+  if (cart.length === 0) return <h2>Giỏ hàng chưa có sản phẩm nào</h2>
+
   return (
     <div className='row mx-auto'>
 
@@ -113,4 +114,4 @@ const cart = () => {
   )
 }
 
-export default cart
+export default Cart

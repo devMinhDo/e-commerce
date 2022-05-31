@@ -6,7 +6,7 @@ import { postData } from '../utils/fetchData';
 import Cookie from 'js-cookie';
 import { useRouter } from 'next/router';
 // import { Head } from 'next/head'
-const signin = () => {
+const Signin = () => {
     const initialState = { email: '', password: '' }
     const [userData, setUserData] = useState(initialState);
     const { email, password } = userData;
@@ -86,4 +86,4 @@ const signin = () => {
     )
 }
 
-export default signin
+export default Signin

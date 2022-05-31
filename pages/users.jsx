@@ -2,7 +2,7 @@ import { getData } from '../utils/fetchData'
 import React, { useContext, useEffect } from 'react'
 import { DataContext } from '../store/GlobalState'
 import Link from 'next/link'
-const users = () => {
+const Users = () => {
     const { state, dispatch } = useContext(DataContext);
     const { users, auth, modal } = state;
     useEffect(() => {
@@ -120,4 +120,4 @@ const users = () => {
     )
 }
 
-export default users
+export default Users

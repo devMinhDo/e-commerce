@@ -5,7 +5,7 @@ import { patchData } from '../utils/fetchData';
 import { imageUpload } from '../utils/imageUpload';
 import Link from 'next/link';
 import { getData } from '../utils/fetchData'
-const profile = () => {
+const Profile = () => {
     const initialSate = {
         avatar: '',
         name: '',
@@ -259,4 +259,4 @@ const profile = () => {
     )
 }
 
-export default profile
+export default Profile

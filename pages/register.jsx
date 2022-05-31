@@ -5,7 +5,7 @@ import valid from '../utils/valid'
 import { DataContext } from '../store/GlobalState'
 import { postData } from '../utils/fetchData';
 import { useRouter } from 'next/router'
-const register = () => {
+const Register = () => {
     const initialState = { name: '', email: '', password: '', cfpassword: '' }
     const [userData, setUserData] = useState(initialState);
     const { name, email, password, cfpassword } = userData;
@@ -86,4 +86,4 @@ const register = () => {
     )
 }
 
-export default register
+export default Register

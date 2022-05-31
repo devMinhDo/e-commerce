@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 import Link from 'next/link';
 import { patchData } from '../../utils/fetchData';
 import { updateItem } from '../../store/Action';
-const detailOrder = () => {
+const DetailOrder = () => {
     const { state, dispatch } = useContext(DataContext);
     const { orders, auth } = state;
     const router = useRouter();
@@ -120,4 +120,4 @@ const detailOrder = () => {
     )
 }
 
-export default detailOrder
+export default DetailOrder

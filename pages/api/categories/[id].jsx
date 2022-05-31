@@ -52,9 +52,10 @@ const deleteCategory = async (req, res) => {
     if (!id) return res.status(400).json({ err: "Id bị lỗi !!!" });
     const products = await Products.find({ category: id });
     console.log(products);
-    return res
-      .status(400)
-      .json({ err: "Vui lòng xóa tất cả sản phẩm có trong danh mục này!!" });
+    if (products)
+      return res
+        .status(400)
+        .json({ err: "Vui lòng xóa tất cả sản phẩm có trong danh mục này!!" });
     await Categories.findByIdAndDelete({ _id: id });
     res.json({
       msg: "Xóa danh mục thành công!!",

@@ -5,7 +5,7 @@ import { postData, putData } from '../utils/fetchData'
 import { updateItem } from '../store/Action';
 
 
-const categorys = () => {
+const Categorys = () => {
     const [name, setName] = useState('');
     const { state, dispatch } = useContext(DataContext);
     const { categories, auth } = state;
@@ -92,4 +92,4 @@ const categorys = () => {
         </div>
     )
 }
-export default categorys
+export default Categorys
